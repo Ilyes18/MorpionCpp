@@ -55,19 +55,21 @@ std::pair<int, int> TicTacToeAI::getMove(std::vector<std::vector<char>> board, c
     return {-1, -1};
 }
 
-bool TicTacToeAI::isWinningMove(const std::vector<std::vector<char>>& board, int row, int col, char playerChar)
-{
-    if (board[row][0] == playerChar && board[row][1] == playerChar && board[row][2] == playerChar){
+bool TicTacToeAI::isWinningMove(const std::vector<std::vector<char>>& board, int row, int col, char playerChar) {
+
+
+    if (board[row][0] == playerChar && board[row][1] == playerChar && board[row][2] == playerChar) {
         return true;
     }
-    if (board[0][col] == playerChar && board[1][col] == playerChar && board[2][col] == playerChar){
+    if (board[0][col] == playerChar && board[1][col] == playerChar && board[2][col] == playerChar) {
         return true;
     }
-    if (board[0][0] == playerChar && board[1][1] == playerChar && board[2][2] == playerChar){
+    if (board[0][0] == playerChar && board[1][1] == playerChar && board[2][2] == playerChar) {
         return true;
     }
-    if (board[0][2] == playerChar && board[1][1] == playerChar && board[2][0] == playerChar){
+    if (board[0][2] == playerChar && board[1][1] == playerChar && board[2][0] == playerChar) {
         return true;
     }
     return false;
+
 }
